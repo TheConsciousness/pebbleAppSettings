@@ -9,8 +9,6 @@
       var option1 = document.getElementById("value1").value;
       var option2 = document.getElementById("value2").value;
       var options = { op1: option1, op2: option2 };
-        var locOptions = encodeURIComponent(JSON.stringify(options));
-        location = "pebblejs://close#" + locOptions;
         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
     });
   });
