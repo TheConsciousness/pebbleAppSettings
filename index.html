@@ -10,7 +10,7 @@
       var options = { op1: option1, op2: option2 };
         var locOptions = encodeURIComponent(JSON.stringify(options));
         location = "pebblejs://close#" + locOptions;
-        window.location.href = location;
+        document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
     });
   });
   
