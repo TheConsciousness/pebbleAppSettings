@@ -6,9 +6,9 @@
 <script>
   $(document).ready(function(e) {
     $("#subButton").click(function(e) {
-      var option1 = document.getElementById("value1").value;
-      var option2 = document.getElementById("value2").value;
-      var options = { op1: option1, op2: option2 };
+      var firstName = document.getElementById("first_name").value;
+      var lastName = document.getElementById("last_name").value;
+      var options = { firstname: firstName, lastname: lastName };
         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
     });
   });
@@ -19,8 +19,10 @@
 <body>
 <p>Pebble settings</p>
 
-<p>Enter value1:</p><br><input type="text" id="value1"><br>
-<p>Enter value2</p><br><input type="text" id="value2"><br>
+<p>First name:</p>
+<input type="text" id="first_name">
+<p>Last name:</p>
+<input type="text" id="last_name">
 <button id="subButton">Submit</button>
 </body>
 </html>
